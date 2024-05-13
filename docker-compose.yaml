@@ -1,0 +1,13 @@
+services:
+  vrising:
+    build: .
+    image: vrising
+    container_name: vrising
+    volumes:
+      - ./data:/app/data
+      - ./server:/app/vrisingserver
+    ports:
+      - 27015:27015/udp
+      - 27016:27016/udp
+    restart: unless-stopped
+
